@@ -67,7 +67,7 @@ print("Seed:")
 print("\"", ' '.join([ word_vectors.similar_by_vector(vec)[0][0]  for vec in pattern   ]), "\"")
 # generate characters
 
-for i in range(5000):
+for i in range(100):
     x = np.reshape( pattern, (1, seq_length, vector_size)  )
     prediction = model.predict(x, verbose=0)[0]
     result = word_vectors.similar_by_vector(prediction)[0][0]
